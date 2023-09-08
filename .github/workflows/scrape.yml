@@ -16,9 +16,7 @@ jobs:
       - name: Remove Chrome
         run: sudo apt purge google-chrome-stable
       - name: Install a new Chrome
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: latest
+        run: sudo apt install google-chrome-stable
       - name: Install all necessary packages
         run: pip install requests beautifulsoup4 pandas webdriver-manager selenium undetected_chromedriver
       - name: Run the scraping script
